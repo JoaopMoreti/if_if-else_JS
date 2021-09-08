@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Nacionalidade</title>
+</head>
+<body>
+    <h1>Teste de Nacionalidade</h1>
+    Digite aqui seu pais de origem:<input type = "text" name = "nabt" id = "nabt">
+    <input type = "button" value = "Verificar" onclick="nacio()">
+    <div id="dize">
+
+    </div>
+    <script>
+        function nacio(){
+            var nabt = window.document.querySelector('input#nabt');
+            var dize = window.document.querySelector('div#dize');
+            var fale = (nabt.value)
+            dize.innerHTML = `Você disse que veio do(e) <strong>${fale}</strong><br>`
+            if(fale == 'Brasil'){
+                dize.innerHTML += `Você é <strong>brasileiro</strong>`
+            } else {
+                dize.innerHTML += `Você é <strong>estrangeiro</strong>`
+            }
+            
+        }
+    </script>  
+    
+</body>
+</html>
